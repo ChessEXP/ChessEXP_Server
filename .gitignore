@@ -1,3 +1,6 @@
 /node_modules
 /Auth
 /.DS_Store
+/public
+/connection.js
+/.env

@@ -17,3 +17,4 @@ module.exports = {
   deleteArticle: (article_id) => {
     return knex('article').where('id', article_id).del();
   }
+}
