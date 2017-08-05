@@ -7,12 +7,10 @@ exports.up = function(knex, Promise) {
     table.text('location').notNullable();
     table.text('description').notNullable();
     table.text('image').notNullable();
-    // table.integer('user_id').unsigned();
-    // table.foreign('user_id').references('user.id'); // insert JWT
     table.integer('rsvplist_id').unsigned();
     table.foreign('rsvplist_id').references('rsvplist.id');
-    // table.integer('comment_id').unsigned();
-    // table.foreign('comment_id').references('comment.id');
+    table.integer('comment_id').unsigned();
+    table.foreign('comment_id').references('comment.id');
 
   });
 };

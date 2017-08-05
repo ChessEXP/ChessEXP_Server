@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments('id').primary();
     table.text('userName').notNullable();
     table.text('email').notNullable();
+    table.text('image');
     table.text('password').notNullable();
     table.datetime('date').notNullable();
     table.boolean('isActive').defaultTo(true);

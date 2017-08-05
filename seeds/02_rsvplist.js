@@ -3,13 +3,11 @@ exports.seed = (knex, Promise) => {
 
     const RSVP = [
       {
-        user_id: 6,
-        user_id: 1
-      },{
-        user_id: 6
+        attendees: JSON.stringify(['BaconLover', 'JohnAppleseedling', 'uberpawnage', 'chessbrah'])
       }, {
-        user_id: 4,
-        user_id: 5
+        attendees: JSON.stringify(['ChessMan', 'tacoCat', 'uberpawnage', 'Fellow'])
+      }, {
+        attendees: JSON.stringify(['Mike', 'Rachel', 'Sarah'])
       }
     ];
 

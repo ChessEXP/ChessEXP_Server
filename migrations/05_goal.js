@@ -2,10 +2,10 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('goal', (table) => {
 
     table.increments('id').primary();
-    table.text('goal').notNullable(); // Web-Sockets
+    table.json('goals'); // Web-Sockets
     table.integer('user_id').unsigned();
     table.foreign('user_id').references('user.id');
-    
+
   });
 };
 
