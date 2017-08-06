@@ -3,6 +3,7 @@ const router = express.Router();
 
 const Event = require('../db/events');
 const Goal = require('../db/goals');
+const Opening = require('../db/openings');
 
 // turtle
 
@@ -45,6 +46,8 @@ router.get('/goals/:id', (req, res, next) => {
     res.json(goal);
   });
 });
+
+// opening-routes
 
 
 
