@@ -3,8 +3,7 @@ exports.up = function(knex, Promise) {
 
     table.increments('id').primary();
     table.json('goals'); // Web-Sockets
-    table.integer('user_id').unsigned();
-    table.foreign('user_id').references('user.id');
+    table.integer('user_id').references('user.id').unsigned().onDelete('cascade');
 
   });
 };

@@ -7,10 +7,8 @@ exports.up = function(knex, Promise) {
     table.text('location').notNullable();
     table.text('description').notNullable();
     table.text('image').notNullable();
-    table.integer('rsvplist_id').unsigned();
-    table.foreign('rsvplist_id').references('rsvplist.id');
-    table.integer('comment_id').unsigned();
-    table.foreign('comment_id').references('comment.id');
+    table.integer('rsvplist_id').references('rsvplist.id').unsigned().onDelete('cascade');
+    table.integer('comment_id').references('comment.id').unsigned().onDelete('cascade');
 
   });
 };

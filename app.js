@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const sockets = require('./sockets');
 const http = require('http');
 
-const auth = require('./auth/user');
+const user = require('./routes/users');
 const index = require('./routes/index');
 
 const server = http.createServer(app);
@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-app.use('/auth', auth);
+app.use('/users', user);
 app.use('/', index);
 
 app.use(function(req, res, next) {
