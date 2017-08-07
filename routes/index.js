@@ -35,7 +35,7 @@ router.post('/events/:id', (req, res, next) => {
 
 // goal-routes
 
-router.get('/goals/', (req, res, next) => {
+router.get('/goals', (req, res, next) => {
   Goal.getAllGoals().then((goals) => {
     res.json(goals);
   });
@@ -48,6 +48,18 @@ router.get('/goals/:id', (req, res, next) => {
 });
 
 // opening-routes
+
+router.get('/positions', (req, res, next) => {
+  Goal.getAllOpenings().then((openings) => {
+    res.json(openings);
+  });
+});
+
+router.get('/positions/:id', (req, res, next) => {
+  Goal.getOneOpenings(req.params.id).then((opening) => {
+    res.json(opening);
+  });
+});
 
 
 
