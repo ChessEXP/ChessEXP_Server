@@ -20,10 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(cors({
-  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
-  credentials: true
-}));
+app.use(cors()); // setting '*'
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
